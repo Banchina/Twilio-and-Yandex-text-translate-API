@@ -11,6 +11,7 @@ app.get('/', (req, res) => res.json({ message: 'You are on the Twilio translater
 
 app.use(bodyParser.json()) //Middleware which parses request to JSON
 
+// the res below refers to the res.json message at the bottom.
 function message(req, res){
 
   // This is the POST function which sends a translation request to Yandex
@@ -36,3 +37,4 @@ function message(req, res){
 app.post('/message', message)
 
 app.listen(4000, () => console.log('We are listening on port 4000'))
+//DON'T NEED ANY WRITING IN YOUR JSON TRANSLATION REQUEST POST AS THE MESSAGE IS IN THE ACTUAL URL
